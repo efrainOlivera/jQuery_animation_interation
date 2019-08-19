@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+    	<title>hover</title>
+    	<link rel="stylesheet" type="text/css" href="hover.css">
+    	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    </head>
+    <body>
+        <img src="pans.png" data-alt-src="pants2.png">
+    	<img src="pans.png" data-alt-src="pants2.png">
+    	<img src="pans.png" data-alt-src="pants2.png">
+    	<img src="pans.png" data-alt-src="pants2.png"> 
+        <script>
+        	$(document).ready(function(){
+            $('img').hover(
+            function(){
+                $(this).stop().fadeOut(function(){
+                    var $temp = $(this).attr('src');
+                    $(this).attr('src', $(this).attr('data-alt-src'));
+                    $(this).attr('data-alt-src', $temp);
+                });
+                $(this).fadeIn();
+            },
+            function(){
+                $(this).stop().fadeOut(function(){
+                    var $temp = $(this).attr('data-alt-src');
+                    $(this).attr('data-alt-src', $(this).attr('src'));
+                    $(this).attr('src', $temp);
+                });
+                $(this).fadeIn();
+            });
+        });
+        </script>
+    </body>
+</html>
