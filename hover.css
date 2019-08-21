@@ -1,5 +1,76 @@
-img{
-	width: 200px;
-	height: 250px;
+.frame {
+	width: 90%;
+	height: 800px;
+    color: white;
+    padding: 10px;
+    margin: 0 auto;
+}
+/*pants style*/
+img {
+	width: auto;
+	height: 320px;
+}
+/*pants container and modifications*/
+.pantsContainer1 {
+	width: 80%;
+	height: auto;
+	margin: 80px auto 0; 
+	padding: 60px 40px;
+}
+/*navigation bar and style*/
+ul {
+	position: fixed;
+	width: 89.7%;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	/*overflow: hidden;*/   /*The overflow property specifies what should happen if content overflows an element's box   */
+}
+li {
+  	float: left;
+}
+.dropdown-info {
+	display: none;
+	position: absolute;
+	background-color: dodgerblue;
+	min-width: 100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.*/
+	z-index: 1;
+}
+.dropdown-info a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-info a:hover {
+	background-color: #ddd;
+}
+.dropdownHome:hover .dropdown-info {
+	display: block;
+}
+.title {
+	display: inline-block;
+	margin-left: 35%;	
+}
+.title a {
+	text-decoration: none;
+}
+.title a h1 {
+	margin: 0;
+}
+.about {
+	float: right;
+}
+li a {
+	display: block;
+	color: black;
 	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover {
+  	background-color: silver;
 }
